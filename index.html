@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Extractor - 고화질 영상 & 음원 추출</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cloud-download-alt"></i> Media Extractor</h1>
+            <p>YouTube, Instagram 등 다양한 플랫폼의 미디어를 간편하게 추출하세요.</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <div class="input-group">
+                    <input type="text" id="url-input" placeholder="여기에 미디어 URL을 붙여넣으세요..." aria-label="URL 입력">
+                </div>
+
+                <div class="options-group">
+                    <label class="switch-container">
+                        <input type="checkbox" id="audio-only">
+                        <span class="slider"></span>
+                        <span class="label-text">음원(MP3)만 추출</span>
+                    </label>
+                </div>
+
+                <button id="download-btn" class="primary-btn">
+                    <span class="btn-text">추출 시작</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <div id="status-container" class="status-container hidden">
+                <div class="spinner"></div>
+                <p id="status-message">서버에서 미디어를 분석 중입니다...</p>
+            </div>
+
+            <div id="result-container" class="result-container hidden">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>추출 완료!</h3>
+                <p>파일 다운로드가 자동으로 시작됩니다.</p>
+                <button id="reset-btn" class="secondary-btn">다른 링크 추출하기</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Media Extractor Service. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
