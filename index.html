@@ -18,6 +18,24 @@
             <div class="card">
                 <div class="input-group">
                     <input type="text" id="url-input" placeholder="여기에 미디어 URL을 붙여넣으세요..." aria-label="URL 입력">
+                    <button id="analyze-btn" class="secondary-btn">분석하기</button>
+                </div>
+
+                <div id="media-info-container" class="media-info-container hidden">
+                    <div class="media-preview">
+                        <img id="media-thumbnail" src="" alt="Thumbnail">
+                        <div class="media-details">
+                            <h4 id="media-title">제목</h4>
+                            <p id="media-duration"></p>
+                        </div>
+                    </div>
+                    
+                    <div id="quality-options" class="quality-options">
+                        <h5>화질 선택 (MP4)</h5>
+                        <div id="quality-list" class="quality-list">
+                            <!-- Qualities will be loaded here -->
+                        </div>
+                    </div>
                 </div>
 
                 <div class="options-group">
