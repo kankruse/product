@@ -1,43 +1,43 @@
-# Media Extractor 🎬
+# 미디어 추출기 (Media Extractor) 🎬
 
-A powerful and user-friendly web application to extract high-quality videos and audio from various platforms like YouTube and Instagram.
+유튜브, 인스타그램 등 다양한 플랫폼에서 고화질 영상과 음원을 간편하게 추출할 수 있는 강력한 웹 어플리케이션입니다.
 
-## 🚀 Key Features
+## 🚀 주요 기능
 
-- **Multi-Quality Support**: Choose your preferred resolution, from **480p to 4K (2160p)**.
-- **Audio Extraction**: Easily convert videos to high-quality **MP3 (192kbps)**.
-- **Smart Analysis**: Fetches video titles, thumbnails, and durations before you download.
-- **Playlist Fix**: Automatically extracts the specific video info even from YouTube Playlist or Mix URLs.
-- **Modern UI**: A clean, responsive interface with real-time status updates.
+- **다양한 화질 지원**: 480p부터 **4K(2160p)**까지, 사용 가능한 모든 해상도를 선택하여 추출할 수 있습니다.
+- **음원 추출 (MP3)**: 영상을 고음질 **MP3(192kbps)** 파일로 손쉽게 변환합니다.
+- **스마트 분석**: 다운로드 전에 영상의 제목, 썸네일, 재생 시간을 미리 확인하고 화질을 선택할 수 있습니다.
+- **재생목록 URL 대응**: 유튜브의 재생목록(Playlist)이나 믹스(Mix) 주소에서도 해당 영상 하나만 정확하게 분석해냅니다.
+- **모던 UI**: 실시간 상태 업데이트를 제공하는 깔끔하고 반응형인 사용자 인터페이스를 갖추고 있습니다.
 
-## 🛠 Tech Stack
+## 🛠 기술 스택
 
-- **Frontend**: HTML5, CSS3 (Modern Baseline), Vanilla JavaScript.
-- **Backend**: Python 3.x, **FastAPI** (High-performance API framework).
-- **Core Engine**: **yt-dlp** (The most advanced media extraction library).
-- **Process Manager**: Uvicorn.
+- **프론트엔드**: HTML5, CSS3 (Modern Baseline), Vanilla JavaScript.
+- **백엔드**: Python 3.x, **FastAPI** (고성능 API 프레임워크).
+- **핵심 엔진**: **yt-dlp** (가장 진보된 미디어 추출 라이브러리).
+- **프로세스 관리**: Uvicorn.
 
-## 📦 Recent Updates
+## 📦 최근 업데이트 내용
 
-1. **Enhanced Format Selection**: Added a dynamic quality picker that lists all available resolutions for the target video.
-2. **Performance Optimization**: Improved metadata extraction speed by 5x using optimized `yt-dlp` flags.
-3. **Robust URL Handling**: Implemented URL normalization to handle complex parameters like `&list=` or `?index=`.
-4. **Environment Stabilization**: Updated the server startup sequence (`run_server.bat`) to ensure proper virtual environment (`venv`) activation and port management.
+1. **상세 화질 선택 기능**: 대상 영상이 지원하는 모든 해상도 목록을 동적으로 가져와 사용자가 직접 선택할 수 있는 기능을 추가했습니다.
+2. **성능 최적화**: `yt-dlp` 옵션을 최적화하여 미디어 정보 분석 속도를 기존 대비 5배 이상 향상시켰습니다.
+3. **URL 처리 강화**: `&list=` 또는 `?index=`와 같은 복잡한 파라미터가 포함된 URL에서도 영상 본체만 정확히 추출하도록 로직을 보강했습니다.
+4. **환경 안정화**: 가상 환경(`venv`) 자동 인식 및 포트 충돌 방지 로직이 포함된 `run_server.bat` 배치 파일을 개선하여 실행 편의성을 높였습니다.
 
-## 🚥 How to Run
+## 🚥 실행 방법
 
-1. **Setup Environment**:
+1. **환경 설정 (최초 1회)**:
    ```powershell
    python -m venv venv
    .\venv\Scripts\python.exe -m pip install fastapi uvicorn yt-dlp pydantic
    ```
-2. **Start Server**:
-   Run `run_server.bat` or use the command:
+2. **서버 시작**:
+   `run_server.bat` 파일을 실행하거나 아래 명령어를 입력하세요.
    ```powershell
    .\venv\Scripts\python.exe -m uvicorn main:app --host 127.0.0.1 --port 8000
    ```
-3. **Access**:
-   Open [http://127.0.0.1:8000](http://127.0.0.1:8000) in your browser.
+3. **접속**:
+   브라우저에서 [http://127.0.0.1:8000](http://127.0.0.1:8000) 주소로 접속하세요.
 
 ---
 © 2026 Media Extractor Service. Managed by Gemini CLI.
